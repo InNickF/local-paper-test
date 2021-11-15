@@ -69,6 +69,7 @@
       floating
       app
       right
+      temporary
       disable-resize-watcher
     >
       <div class="mobile-drawer-content">
@@ -83,11 +84,15 @@
         </div>
         <div>
           <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title
-                ><p class="logout">Logout</p></v-list-item-title
-              >
-            </v-list-item-content>
+            <v-list-item-title><span>Profile</span></v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title><span>Configuration</span></v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title
+              ><span class="logout">Logout</span></v-list-item-title
+            >
           </v-list-item>
         </div>
       </div>
@@ -203,8 +208,5 @@ nav {
   justify-content: space-between;
   height: 100%;
   padding: 0 12px;
-}
-.logout {
-  color: rgb(255, 70, 70);
 }
 </style>

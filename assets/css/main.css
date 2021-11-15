@@ -4,6 +4,10 @@
   --lp-background-light: #404d5b;
 }
 
+p {
+  font-weight: lighter;
+}
+
 .v-application {
   background-color: var(--lp-background-light) !important;
 }
@@ -23,4 +27,7 @@
 
 .v-list .v-list-item--active {
   color: var(--lp-primary) !important;
+}
+.logout {
+  color: rgb(255, 70, 70);
 }

@@ -5,9 +5,7 @@
       <section class="lp-page-container py-16 px-16">
         <Nuxt />
       </section>
-      <section class="px-8">
-        <LpFooter />
-      </section>
+      <LpFooter />
     </v-main>
   </v-app>
 </template>
