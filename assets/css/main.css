@@ -31,3 +31,7 @@ p {
 .logout {
   color: rgb(255, 70, 70);
 }
+
+.pointer {
+  cursor: pointer;
+}

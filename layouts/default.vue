@@ -2,7 +2,7 @@
   <v-app dark>
     <LpNavigation />
     <v-main>
-      <section class="lp-page-container py-16 px-16">
+      <section class="lp-page-container py-8 px-4 py-md-16 px-md-16">
         <Nuxt />
       </section>
       <LpFooter />
