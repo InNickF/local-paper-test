@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - local-paper-test',
-    title: 'local-paper-test',
+    titleTemplate: '%s | LOCALPAPER',
+    title: 'LOCALPAPER',
     htmlAttrs: {
       lang: 'en',
     },

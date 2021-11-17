@@ -273,6 +273,9 @@ export default {
       ],
     }
   },
+  head: {
+    title: 'Dashboard',
+  },
 }
 </script>
 <style scoped>
