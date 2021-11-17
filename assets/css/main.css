@@ -52,8 +52,7 @@
 
 .icon-animation {
   stroke-dasharray: 40;
-  animation: dash 3s cubic-bezier(0.42, 0, 0.07, 1.02);
-  animation-iteration-count: 2;
+  animation: dash 4s cubic-bezier(0.42, 0, 0.07, 1.02);
 }
 
 .lp-entrance {
@@ -133,10 +132,10 @@ p {
 .lp-box-shadow::after {
   content: '';
   background-color: transparent;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.05s ease-in-out;
   border-radius: 22px;
   position: absolute;
-  opacity: 0.3;
+  opacity: 0;
   box-shadow: 0px 10px 20px -5px #1b2026;
   top: 0;
   bottom: 0;
@@ -145,5 +144,5 @@ p {
   z-index: 0;
 }
 .lp-box-shadow:hover::after {
-  opacity: 0.8;
+  opacity: 0.5;
 }
