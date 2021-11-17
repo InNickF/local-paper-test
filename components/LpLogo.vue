@@ -1,5 +1,5 @@
 <template>
-  <p class="text-logo my-0 ml-4 font-weight-light">
+  <p class="text-logo my-0 ml-4 font-weight-light lp-entrance">
     Local<strong class="font-weight-bold">paper</strong>
   </p>
 </template>

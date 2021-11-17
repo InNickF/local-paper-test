@@ -2,6 +2,91 @@
   --lp-primary: #19cfde;
   --lp-background: #333d48;
   --lp-background-light: #404d5b;
+  --lp-animation-duration: 0.45s;
+  --lp-animation-delay: 0;
+  --lp-entrance-scale: 1.2;
+}
+@keyframes entrance {
+  0% {
+    transform: scale(var(--lp-entrance-scale));
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(-35deg);
+  }
+  100% {
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+.icon-animation {
+  stroke-dasharray: 40;
+  animation: dash 3s cubic-bezier(0.42, 0, 0.07, 1.02);
+  animation-iteration-count: 2;
+}
+
+.lp-entrance {
+  opacity: 0;
+  animation-name: entrance;
+  animation-duration: var(--lp-animation-duration);
+  animation-timing-function: ease-in-out;
+  animation-delay: var(--lp-animation-delay);
+  animation-fill-mode: forwards;
+}
+
+.lp-rotation {
+  transform: rotate(0);
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: var(--lp-animation-delay);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.lp-pulse {
+  opacity: 1;
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: var(--lp-animation-delay);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.lp-rotation:hover {
+  animation-play-state: paused;
 }
 
 p {
@@ -13,7 +98,7 @@ p {
 }
 
 .theme--dark.v-card {
-  background-color: var(--lp-background) !important;
+  background-color: transparent !important;
 }
 
 .glass-effect {
@@ -34,4 +119,31 @@ p {
 
 .pointer {
   cursor: pointer;
+}
+.lp-box-shadow {
+  position: relative;
+  background-color: var(--lp-background);
+  padding: 12px 16px;
+  border-radius: 22px;
+}
+.lp-box-shadow > * {
+  position: relative;
+  z-index: 1;
+}
+.lp-box-shadow::after {
+  content: '';
+  background-color: transparent;
+  transition: opacity 0.25s ease-in-out;
+  border-radius: 22px;
+  position: absolute;
+  opacity: 0.3;
+  box-shadow: 0px 10px 20px -5px #1b2026;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.lp-box-shadow:hover::after {
+  opacity: 0.8;
 }

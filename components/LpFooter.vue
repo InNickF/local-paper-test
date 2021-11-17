@@ -1,14 +1,14 @@
 <template>
   <section class="px-3 px-md-6">
     <v-footer class="footer rounded-t-xl">
-      <v-row class="my-0 mt-8 px-8">
+      <v-row class="my-0 mt-8 px-8 px-md-16">
         <v-col
           v-for="(section, i) in sections"
           :key="i"
           cols="12"
           md="6"
           lg="3"
-          class="d-flex flex-column align-start"
+          class="d-flex flex-column align-start px-md-16"
         >
           <h3 class="text-uppercase mb-4">
             {{ section.title }}
@@ -224,5 +224,9 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+svg {
+  cursor: pointer;
 }
 </style>

@@ -7,6 +7,7 @@
           black--text
           ml-4
           pr-1
+          lp-entrance
           d-none d-lg-inline-flex d-xl-inline-flex
         "
         color="primary"
@@ -39,7 +40,7 @@
 <style scoped>
 .user-button {
   margin-right: -8px;
-  transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out border-radius;
 }
 .user-icon {
   background: var(--lp-background);

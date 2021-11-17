@@ -18,7 +18,10 @@
           :to="item.to"
           router
           exact
-          class="mb-1"
+          class="mb-1 lp-entrance"
+          :style="{
+            '--lp-animation-delay': `0.${i}s`,
+          }"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -74,8 +77,8 @@
     >
       <div class="mobile-drawer-content">
         <div>
-          <v-list class="py-2 px-2">
-            <v-list-item v-for="(link, i) in links" :key="i" class="mb-1">
+          <v-list rounded class="py-2 px-2">
+            <v-list-item v-for="(link, i) in links" :key="i" class="mb-1" link>
               <v-list-item-content>
                 <v-list-item-title v-text="link" />
               </v-list-item-content>
@@ -83,13 +86,13 @@
           </v-list>
         </div>
         <div>
-          <v-list-item>
+          <v-list-item link>
             <v-list-item-title><span>Profile</span></v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item link>
             <v-list-item-title><span>Configuration</span></v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item link>
             <v-list-item-title
               ><span class="logout">Logout</span></v-list-item-title
             >
@@ -147,12 +150,12 @@ export default {
         },
       ],
       links: [
-        'Home',
+        'Dashboard',
         'Investment',
         'Real State',
         'Find art',
         'About us',
-        'Information',
+        'Info',
       ],
     }
   },
